@@ -65,6 +65,7 @@
     <Compile Include="frmEliminar.Designer.cs">
       <DependentUpon>frmEliminar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Int.cs" />
     <Compile Include="InventarioDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

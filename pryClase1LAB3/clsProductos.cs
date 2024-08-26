@@ -12,13 +12,13 @@ namespace pryClase1LAB3
 {
     internal class clsProductos
     {
-        
 
-        OleDbConnection conexionBD;
-        OleDbCommand comandoBD;
+
+        OleDbConnection conexionBD = new OleDbConnection();
+        OleDbCommand comandoBD = new OleDbCommand();
         OleDbDataReader lectorBD;
-        OleDbDataAdapter adaptadorBD;
-        DataSet objDS;
+        OleDbDataAdapter adaptadorBD = new OleDbDataAdapter();
+        //DataSet objDS;
 
         string cadenaDeConexion = @"Provider = Microsoft.ACE.OLEDB.12.0;" + " Data Source = ..\\..\\Resources\\Inventario.accdb";
 
@@ -76,8 +76,9 @@ namespace pryClase1LAB3
 
         }
 
-        public void AgregarClientes() 
+        public void AgregarProducto() 
         {
+            
             try
             {
                 conexionBD.ConnectionString = cadenaDeConexion;
@@ -107,15 +108,120 @@ namespace pryClase1LAB3
                 adaptadorBD.Update(DS, Tabla);
                 conexionBD.Close();
             }
-            catch (Exception ex) 
+            catch (Exception ) 
             {
-                MessageBox.Show("No se pudo registrar cliente" );
+                MessageBox.Show("No se pudo registrar cliente", "ERROR ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
            
         }
-        public void TraerDatos()
+        public void Buscar(Int32 i) 
         {
-            
+            OleDbConnection conexionBD = new OleDbConnection();
+            OleDbCommand comandoBD = new OleDbCommand();
+
+            try
+            {
+                conexionBD.ConnectionString = cadenaDeConexion;
+                conexionBD.Open();
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = CommandType.TableDirect;
+                comandoBD.CommandText = Tabla;
+
+                OleDbDataReader Lector = comandoBD.ExecuteReader();
+                if (Lector.HasRows)
+                {
+                    while (Lector.Read())
+                    {
+                        if (Lector.GetInt32(0) == i)
+                        {
+                            Codigo = Lector.GetInt32(0);
+                            Nombre = Lector.GetString(1);
+                            Precio = Lector.GetDecimal(3);
+                            Stock = Lector.GetInt32(4);
+                            Categoria = Lector.GetString(5);
+                            Descripcion = Lector.GetString(6);
+                        }
+                    }
+                }
+
+                conexionBD.Close();
+            }
+            catch (Exception MensajeAviso)
+            {
+                MessageBox.Show(MensajeAviso.Message);
+            }
+        }
+        public void EliminarProducto(Int32 CodigoProducto)
+        {
+            try
+            {
+                string EProducto = "DELETE FROM Productos" + "WHERE(" + CodigoProducto + "=[Codigo])";
+                conexionBD.ConnectionString = cadenaDeConexion;
+                conexionBD.Open();
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = CommandType.Text;
+                comandoBD.CommandText = EProducto;
+                comandoBD.ExecuteNonQuery();
+                conexionBD.Close();
+                MessageBox.Show("Producto Eliminado con éxito");
+            }
+            catch (Exception Mensaje)
+            {
+                MessageBox.Show("El cliente no se pudo eliminar " + Mensaje.Message);
+                //throw;
+            }
+        }
+        public void ModificarProducto( Int32 CodigoProducto) 
+        {
+            try
+            {
+                String Mproducto = "UPDATE PRODUCTOS SET CODIGO= " + Codigo + ", Nombre=' " + Nombre + ", Precio= "
+                    + Precio + ", Stock=" + Stock + ", Categoria='" + Categoria + ", Descripcion='" + Descripcion + "WHERE [Codigo] = " + CodigoProducto + "";
+                conexionBD.ConnectionString = cadenaDeConexion;
+                conexionBD.Open();
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = CommandType.Text;
+                comandoBD.CommandText = Mproducto;
+                comandoBD.ExecuteNonQuery();
+                conexionBD.Close();
+                MessageBox.Show("Producto Modificado con éxito");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("el Producto no se pudo Modificar ");
+                //throw;
+            }
+        }
+        public void ListarProductos(DataGridView grilla) 
+        {
+            //try
+            //{
+                comandoBD = new OleDbCommand();
+                //conexionBD.ConnectionString = cadenaDeConexion;
+                //conexionBD.Open();
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = CommandType.TableDirect;
+                comandoBD.CommandText = Tabla;
+                //OleDbDataReader DR = comandoBD.ExecuteReader();
+                grilla.Rows.Clear();
+                lectorBD = comandoBD.ExecuteReader();
+                clsProductos clsProductos = new clsProductos();
+                if (lectorBD.HasRows)
+                {
+                    while (lectorBD.Read())
+                    {
+                    //grilla.Rows.Add(lectorBD.GetInt32(0), lectorBD.GetString(1), lectorBD.GetDecimal(2), lectorBD.GetInt32(3), lectorBD.GetString(4), lectorBD.GetString(5));
+                        grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[5]);
+
+                    }
+                }
+                //conexionBD.Close();
+            //}
+            //catch (Exception Mensaje)
+            //{
+                //MessageBox.Show(Mensaje.Message);
+                //throw;
+            //}
         }
     }
 }
