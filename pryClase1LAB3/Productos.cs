@@ -48,5 +48,12 @@ namespace pryClase1LAB3
         {
 
         }
+
+        private void controlStockYGraficosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ControlStock newobj = new ControlStock();
+            newobj.ShowDialog();
+            this.Hide();
+        }
     }
 }

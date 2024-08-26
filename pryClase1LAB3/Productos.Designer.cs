@@ -34,6 +34,7 @@
             this.barraDeEstado = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblUsuarioTS = new System.Windows.Forms.ToolStripStatusLabel();
+            this.controlStockYGraficosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.barraDeEstado.SuspendLayout();
             this.SuspendLayout();
@@ -42,10 +43,11 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
-            this.toolStripMenuItem2});
+            this.toolStripMenuItem2,
+            this.controlStockYGraficosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(298, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(436, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -70,7 +72,7 @@
             this.lblUsuarioTS});
             this.barraDeEstado.Location = new System.Drawing.Point(0, 80);
             this.barraDeEstado.Name = "barraDeEstado";
-            this.barraDeEstado.Size = new System.Drawing.Size(298, 22);
+            this.barraDeEstado.Size = new System.Drawing.Size(436, 22);
             this.barraDeEstado.TabIndex = 15;
             this.barraDeEstado.Text = "statusStrip1";
             // 
@@ -86,11 +88,18 @@
             this.lblUsuarioTS.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblUsuarioTS.Size = new System.Drawing.Size(0, 17);
             // 
+            // controlStockYGraficosToolStripMenuItem
+            // 
+            this.controlStockYGraficosToolStripMenuItem.Name = "controlStockYGraficosToolStripMenuItem";
+            this.controlStockYGraficosToolStripMenuItem.Size = new System.Drawing.Size(145, 20);
+            this.controlStockYGraficosToolStripMenuItem.Text = "Control Stock y graficos";
+            this.controlStockYGraficosToolStripMenuItem.Click += new System.EventHandler(this.controlStockYGraficosToolStripMenuItem_Click);
+            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(298, 102);
+            this.ClientSize = new System.Drawing.Size(436, 102);
             this.Controls.Add(this.barraDeEstado);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -114,6 +123,7 @@
         private System.Windows.Forms.StatusStrip barraDeEstado;
         private System.Windows.Forms.ToolStripStatusLabel lblStatus;
         private System.Windows.Forms.ToolStripStatusLabel lblUsuarioTS;
+        private System.Windows.Forms.ToolStripMenuItem controlStockYGraficosToolStripMenuItem;
     }
 }
 

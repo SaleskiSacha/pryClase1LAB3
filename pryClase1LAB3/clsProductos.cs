@@ -242,5 +242,36 @@ namespace pryClase1LAB3
                 //throw;
             //}
         }
+        public Dictionary<string, int> ObtenerNivelesDeStock() 
+        {
+            Dictionary<string, int> nivelesDeStock = new Dictionary<string, int>();
+            try
+            {
+                using (OleDbConnection conexionBD = new OleDbConnection(cadenaDeConexion))
+                {
+                    conexionBD.Open();
+
+                    // Consulta SQL para obtener el nombre y stock de cada producto
+                    string query = "SELECT Nombre, Stock FROM Productos";
+
+                    using (OleDbCommand comandoBD = new OleDbCommand(query, conexionBD))
+                    {
+                        OleDbDataReader lector = comandoBD.ExecuteReader();
+                        while (lector.Read())
+                        {
+                            string nombreProducto = lector.GetString(0);
+                            int stockProducto = lector.GetInt32(1);
+                            nivelesDeStock[nombreProducto] = stockProducto;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de errores
+                System.Windows.Forms.MessageBox.Show("Ocurrió un error al obtener los niveles de stock: " + ex.Message);
+            }
+            return nivelesDeStock;
+        }
     }
 }
