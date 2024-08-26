@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-
+using System.Data.OleDb;
 
 namespace pryClase1LAB3
 {
@@ -19,6 +19,7 @@ namespace pryClase1LAB3
             InitializeComponent();
         }
         clsProductos objProductos = new clsProductos();
+        private clsProductos objBaseDatos;
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -127,23 +128,21 @@ namespace pryClase1LAB3
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            Int32 CodProductos = Convert.ToInt32(txtCodigo.Text);
+            Int32 codi = Convert.ToInt32(txtBuscar.Text);
             clsProductos Productos = new clsProductos();
-            Productos.Buscar(CodProductos);
-            if (Productos.Codigo != CodProductos)
+            Productos.Buscar(codi);
+            if (Productos.Codigo != codi)
             {
-                MessageBox.Show("El Cliente no se encuentra Regristrado");
+                MessageBox.Show("El Producto no se encuentra registrado");
                 txtBuscar.Text = "";
             }
             else
             {
+                txtCodigo.Text = Convert.ToString(Productos.Codigo);
                 txtNombre.Text = Productos.Nombre;
-                txtPrecio.Text = Convert.ToString(Productos.Precio);
                 txtStock.Text = Convert.ToString(Productos.Stock);
                 txtCategoria.Text = Productos.Categoria;
                 txtDescripcion.Text = Productos.Descripcion;
-                
-
             }
         }
 
