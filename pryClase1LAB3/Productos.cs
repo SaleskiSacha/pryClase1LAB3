@@ -43,5 +43,10 @@ namespace pryClase1LAB3
             newobj.ShowDialog();
             this.Hide();
         }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

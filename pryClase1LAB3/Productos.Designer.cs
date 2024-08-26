@@ -45,7 +45,7 @@
             this.toolStripMenuItem2});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(374, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(298, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -68,9 +68,9 @@
             this.barraDeEstado.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblStatus,
             this.lblUsuarioTS});
-            this.barraDeEstado.Location = new System.Drawing.Point(0, 151);
+            this.barraDeEstado.Location = new System.Drawing.Point(0, 80);
             this.barraDeEstado.Name = "barraDeEstado";
-            this.barraDeEstado.Size = new System.Drawing.Size(374, 22);
+            this.barraDeEstado.Size = new System.Drawing.Size(298, 22);
             this.barraDeEstado.TabIndex = 15;
             this.barraDeEstado.Text = "statusStrip1";
             // 
@@ -90,7 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(374, 173);
+            this.ClientSize = new System.Drawing.Size(298, 102);
             this.Controls.Add(this.barraDeEstado);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;

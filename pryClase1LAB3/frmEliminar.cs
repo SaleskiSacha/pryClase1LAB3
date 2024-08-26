@@ -83,6 +83,15 @@ namespace pryClase1LAB3
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
             btnGuardar.Enabled = true;
+
+            
+            txtNombre.ReadOnly = false;
+            txtPrecio.ReadOnly = false;
+            txtCodigo.ReadOnly = false;
+            txtStock.ReadOnly = false;
+            txtCategoria.ReadOnly = false;
+            txtDescripcion.ReadOnly = false;
+
         }
         private void Habilitar() 
         {
@@ -123,7 +132,6 @@ namespace pryClase1LAB3
         {
             Productos newobj = new Productos();
             newobj.ShowDialog();
-            Close();
             this.Hide();
         }
 

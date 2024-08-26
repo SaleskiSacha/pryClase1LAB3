@@ -51,6 +51,7 @@
             this.txtCategoria = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.mrcAgregar = new System.Windows.Forms.GroupBox();
+            this.btnExportar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.mrcAgregar.SuspendLayout();
             this.SuspendLayout();
@@ -122,7 +123,7 @@
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(599, 234);
+            this.btnListar.Location = new System.Drawing.Point(461, 234);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(94, 23);
             this.btnListar.TabIndex = 3;
@@ -248,11 +249,21 @@
             this.mrcAgregar.TabStop = false;
             this.mrcAgregar.Text = "Detalles del Producto";
             // 
+            // btnExportar
+            // 
+            this.btnExportar.Location = new System.Drawing.Point(599, 234);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(94, 23);
+            this.btnExportar.TabIndex = 17;
+            this.btnExportar.Text = "Exportar";
+            this.btnExportar.UseVisualStyleBackColor = true;
+            // 
             // frmAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(705, 276);
+            this.Controls.Add(this.btnExportar);
             this.Controls.Add(this.mrcAgregar);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.btnVolver);
@@ -292,5 +303,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Button btnExportar;
     }
 }

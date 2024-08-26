@@ -176,21 +176,39 @@ namespace pryClase1LAB3
         {
             try
             {
-                String Mproducto = "UPDATE PRODUCTOS SET CODIGO= " + Codigo + ", Nombre=' " + Nombre + ", Precio= "
-                    + Precio + ", Stock=" + Stock + ", Categoria='" + Categoria + ", Descripcion='" + Descripcion + "WHERE [Codigo] = " + CodigoProducto + "";
-                conexionBD.ConnectionString = cadenaDeConexion;
-                conexionBD.Open();
-                comandoBD.Connection = conexionBD;
-                comandoBD.CommandType = CommandType.Text;
-                comandoBD.CommandText = Mproducto;
-                comandoBD.ExecuteNonQuery();
-                conexionBD.Close();
-                MessageBox.Show("Producto Modificado con éxito");
+                using (OleDbConnection conexionBD = new OleDbConnection(cadenaDeConexion))
+                {
+                    conexionBD.Open();
+
+                    // Sentencia SQL para modificar el producto con parámetros
+                    string MProducto = "UPDATE Productos SET " +
+                                       "Nombre = @Nombre, " +
+                                       "Precio = @Precio, " +
+                                       "Stock = @Stock, " +
+                                       "Categoria = @Categoria, " +
+                                       "Descripcion = @Descripcion " +
+                                       "WHERE Codigo = @Codigo";
+
+                    using (OleDbCommand comandoBD = new OleDbCommand(MProducto, conexionBD))
+                    {
+                        // Asignar los valores a los parámetros
+                        comandoBD.Parameters.AddWithValue("@Nombre", Nombre);
+                        comandoBD.Parameters.AddWithValue("@Precio", Precio);
+                        comandoBD.Parameters.AddWithValue("@Stock", Stock);
+                        comandoBD.Parameters.AddWithValue("@Categoria", Categoria);
+                        comandoBD.Parameters.AddWithValue("@Descripcion", Descripcion);
+                        comandoBD.Parameters.AddWithValue("@Codigo", CodigoProducto);
+
+                        // Ejecutar la actualización
+                        comandoBD.ExecuteNonQuery();
+                    }
+                }
             }
             catch (Exception)
             {
                 MessageBox.Show("el Producto no se pudo Modificar ");
                 //throw;
+                
             }
         }
         public void ListarProductos(DataGridView grilla) 
