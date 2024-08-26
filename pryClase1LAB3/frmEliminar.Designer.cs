@@ -126,7 +126,7 @@
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(132, 189);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(252, 20);
             this.txtDescripcion.TabIndex = 15;
             this.txtDescripcion.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
             // 
@@ -143,7 +143,7 @@
             // 
             this.txtCategoria.Location = new System.Drawing.Point(132, 154);
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(100, 20);
+            this.txtCategoria.Size = new System.Drawing.Size(252, 20);
             this.txtCategoria.TabIndex = 14;
             this.txtCategoria.TextChanged += new System.EventHandler(this.txtCategoria_TextChanged);
             // 

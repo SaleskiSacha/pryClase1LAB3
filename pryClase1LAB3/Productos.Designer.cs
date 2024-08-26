@@ -59,8 +59,8 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(117, 20);
-            this.toolStripMenuItem2.Text = "Buscar y Modificar";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(167, 20);
+            this.toolStripMenuItem2.Text = "Buscar, Modificar o Eliminar";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // barraDeEstado

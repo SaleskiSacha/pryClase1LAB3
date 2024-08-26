@@ -136,10 +136,10 @@ namespace pryClase1LAB3
                         {
                             Codigo = Lector.GetInt32(0);
                             Nombre = Lector.GetString(1);
-                            Precio = Lector.GetDecimal(3);
-                            Stock = Lector.GetInt32(4);
-                            Categoria = Lector.GetString(5);
-                            Descripcion = Lector.GetString(6);
+                            Precio = Lector.GetDecimal(2);
+                            Stock = Lector.GetInt32(3);
+                            Categoria = Lector.GetString(4);
+                            Descripcion = Lector.GetString(5);
                         }
                     }
                 }
@@ -151,11 +151,12 @@ namespace pryClase1LAB3
                 MessageBox.Show(MensajeAviso.Message);
             }
         }
+        
         public void EliminarProducto(Int32 CodigoProducto)
         {
             try
             {
-                string EProducto = "DELETE FROM Productos" + "WHERE(" + CodigoProducto + "=[Codigo])";
+                string EProducto = " DELETE FROM Productos " + "WHERE(" + CodigoProducto + "=[Codigo])";
                 conexionBD.ConnectionString = cadenaDeConexion;
                 conexionBD.Open();
                 comandoBD.Connection = conexionBD;

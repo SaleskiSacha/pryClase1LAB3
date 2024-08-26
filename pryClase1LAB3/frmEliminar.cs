@@ -67,7 +67,7 @@ namespace pryClase1LAB3
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             LimpiarComandos();
-            Int32 Codigo = Convert.ToInt32(txtCodigo.Text);
+            Int32 Codigo = Convert.ToInt32(txtBuscar.Text);
             clsProductos EProdcuto = new clsProductos();
             EProdcuto.EliminarProducto(Codigo);
             txtNombre.Text = "";
@@ -123,6 +123,7 @@ namespace pryClase1LAB3
         {
             Productos newobj = new Productos();
             newobj.ShowDialog();
+            Close();
             this.Hide();
         }
 
@@ -140,6 +141,7 @@ namespace pryClase1LAB3
             {
                 txtCodigo.Text = Convert.ToString(Productos.Codigo);
                 txtNombre.Text = Productos.Nombre;
+                txtPrecio.Text = Convert.ToString(Productos.Precio);
                 txtStock.Text = Convert.ToString(Productos.Stock);
                 txtCategoria.Text = Productos.Categoria;
                 txtDescripcion.Text = Productos.Descripcion;
