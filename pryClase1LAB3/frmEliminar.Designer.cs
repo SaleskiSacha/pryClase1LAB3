@@ -265,6 +265,7 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnGuardar);
             this.Name = "frmEliminar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEliminar";
             this.Load += new System.EventHandler(this.frmEliminar_Load);
             this.mrcAgregar.ResumeLayout(false);

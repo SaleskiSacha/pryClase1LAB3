@@ -269,6 +269,7 @@
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.dgv1);
             this.Name = "frmAgregar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAgregar";
             this.Load += new System.EventHandler(this.frmAgregar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();

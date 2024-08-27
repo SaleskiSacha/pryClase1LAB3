@@ -131,8 +131,9 @@ namespace pryClase1LAB3
         private void btnVolver_Click(object sender, EventArgs e)
         {
             Productos newobj = new Productos();
-            newobj.ShowDialog();
             this.Hide();
+            newobj.ShowDialog();
+            
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
