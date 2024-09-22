@@ -72,6 +72,14 @@ namespace pryClase1LAB3
             objBaseDatos = new clsProductos();
             objBaseDatos.ConectarBD();
         }
+
+        private void btnExportar_Click(object sender, EventArgs e)
+        {
+            objBaseDatos = new clsProductos();
+            objBaseDatos.guardarArchivo();
+            dgv1.Rows.Clear();
+            MessageBox.Show("Archivo exportado con Exito");
+        }
     }
 
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregar));
             this.dgv1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +59,7 @@
             // 
             // dgv1
             // 
+            this.dgv1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -68,7 +70,7 @@
             this.Column6});
             this.dgv1.Location = new System.Drawing.Point(320, 12);
             this.dgv1.Name = "dgv1";
-            this.dgv1.Size = new System.Drawing.Size(373, 212);
+            this.dgv1.Size = new System.Drawing.Size(639, 223);
             this.dgv1.TabIndex = 0;
             // 
             // Column1
@@ -105,7 +107,7 @@
             // 
             this.btnAgregar.Location = new System.Drawing.Point(194, 222);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(94, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(94, 30);
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -113,9 +115,10 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(320, 234);
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Location = new System.Drawing.Point(320, 241);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(94, 23);
+            this.btnVolver.Size = new System.Drawing.Size(94, 30);
             this.btnVolver.TabIndex = 2;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -123,9 +126,10 @@
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(461, 234);
+            this.btnListar.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListar.Location = new System.Drawing.Point(420, 241);
             this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(94, 23);
+            this.btnListar.Size = new System.Drawing.Size(94, 30);
             this.btnListar.TabIndex = 3;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
@@ -136,7 +140,7 @@
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Location = new System.Drawing.Point(6, 31);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(40, 13);
+            this.lblCodigo.Size = new System.Drawing.Size(51, 17);
             this.lblCodigo.TabIndex = 4;
             this.lblCodigo.Text = "Código";
             // 
@@ -145,7 +149,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Location = new System.Drawing.Point(6, 64);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.Size = new System.Drawing.Size(57, 17);
             this.lblNombre.TabIndex = 5;
             this.lblNombre.Text = "Nombre";
             // 
@@ -154,7 +158,7 @@
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Location = new System.Drawing.Point(6, 95);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(37, 13);
+            this.lblPrecio.Size = new System.Drawing.Size(44, 17);
             this.lblPrecio.TabIndex = 6;
             this.lblPrecio.Text = "Precio";
             // 
@@ -163,7 +167,7 @@
             this.lblStock.AutoSize = true;
             this.lblStock.Location = new System.Drawing.Point(6, 128);
             this.lblStock.Name = "lblStock";
-            this.lblStock.Size = new System.Drawing.Size(35, 13);
+            this.lblStock.Size = new System.Drawing.Size(40, 17);
             this.lblStock.TabIndex = 7;
             this.lblStock.Text = "Stock";
             // 
@@ -172,7 +176,7 @@
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Location = new System.Drawing.Point(6, 161);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(52, 13);
+            this.lblCategoria.Size = new System.Drawing.Size(65, 17);
             this.lblCategoria.TabIndex = 8;
             this.lblCategoria.Text = "Categoria";
             // 
@@ -181,7 +185,7 @@
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Location = new System.Drawing.Point(6, 196);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(63, 13);
+            this.lblDescripcion.Size = new System.Drawing.Size(76, 17);
             this.lblDescripcion.TabIndex = 9;
             this.lblDescripcion.Text = "Descripcion";
             // 
@@ -189,42 +193,42 @@
             // 
             this.txtCodigo.Location = new System.Drawing.Point(132, 24);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(100, 23);
             this.txtCodigo.TabIndex = 10;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(132, 57);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(100, 23);
             this.txtNombre.TabIndex = 11;
             // 
             // txtStock
             // 
             this.txtStock.Location = new System.Drawing.Point(132, 121);
             this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(100, 20);
+            this.txtStock.Size = new System.Drawing.Size(100, 23);
             this.txtStock.TabIndex = 12;
             // 
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(132, 88);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(100, 20);
+            this.txtPrecio.Size = new System.Drawing.Size(100, 23);
             this.txtPrecio.TabIndex = 13;
             // 
             // txtCategoria
             // 
             this.txtCategoria.Location = new System.Drawing.Point(132, 154);
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(100, 20);
+            this.txtCategoria.Size = new System.Drawing.Size(100, 23);
             this.txtCategoria.TabIndex = 14;
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(132, 189);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(100, 23);
             this.txtDescripcion.TabIndex = 15;
             // 
             // mrcAgregar
@@ -242,32 +246,37 @@
             this.mrcAgregar.Controls.Add(this.txtNombre);
             this.mrcAgregar.Controls.Add(this.lblDescripcion);
             this.mrcAgregar.Controls.Add(this.txtCodigo);
+            this.mrcAgregar.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mrcAgregar.Location = new System.Drawing.Point(12, 12);
             this.mrcAgregar.Name = "mrcAgregar";
-            this.mrcAgregar.Size = new System.Drawing.Size(302, 252);
+            this.mrcAgregar.Size = new System.Drawing.Size(302, 258);
             this.mrcAgregar.TabIndex = 16;
             this.mrcAgregar.TabStop = false;
             this.mrcAgregar.Text = "Detalles del Producto";
             // 
             // btnExportar
             // 
-            this.btnExportar.Location = new System.Drawing.Point(599, 234);
+            this.btnExportar.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportar.Location = new System.Drawing.Point(865, 241);
             this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(94, 23);
+            this.btnExportar.Size = new System.Drawing.Size(94, 30);
             this.btnExportar.TabIndex = 17;
             this.btnExportar.Text = "Exportar";
             this.btnExportar.UseVisualStyleBackColor = true;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
             // frmAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 276);
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.ClientSize = new System.Drawing.Size(971, 277);
             this.Controls.Add(this.btnExportar);
             this.Controls.Add(this.mrcAgregar);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.dgv1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAgregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAgregar";

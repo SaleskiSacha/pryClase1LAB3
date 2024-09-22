@@ -273,5 +273,52 @@ namespace pryClase1LAB3
             }
             return nivelesDeStock;
         }
+        public void guardarArchivo()
+        {
+            try
+            {
+
+                conexionBD.ConnectionString = cadenaDeConexion;
+                conexionBD.Open();
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = CommandType.TableDirect;
+                comandoBD.CommandText = Tabla;
+                OleDbDataReader DR = comandoBD.ExecuteReader();
+                using (StreamWriter sw = new StreamWriter("datos.csv", false))
+                {
+                    sw.WriteLine("Listado de productos\n"); //n es para el salto de linea
+                    sw.WriteLine();
+                    sw.WriteLine("Codigo;Nombre;Precio;Stock;Categoria;Descripcion");
+                    if (DR.HasRows)
+                    {
+                        while (DR.Read())
+                        {
+                            sw.Write(DR.GetInt32(0));
+                            sw.Write(";");
+                            sw.Write(DR.GetString(1));
+                            sw.Write(";");
+                            sw.Write(DR.GetDecimal(2));
+                            sw.Write(";");
+                            sw.Write(DR.GetInt32(3));
+                            sw.Write(";");
+                            sw.Write(DR.GetString(4));
+                            sw.Write(";");
+                            sw.Write(DR.GetString(5));
+                            sw.Write("\n");
+                        }
+                    }
+                    conexionBD.Close();
+                    sw.Close();
+                    MessageBox.Show("Exportado con exito");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

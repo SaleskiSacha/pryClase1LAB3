@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEliminar));
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -54,6 +55,7 @@
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(318, 345);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(93, 32);
@@ -64,6 +66,7 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(219, 345);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(93, 32);
@@ -74,6 +77,7 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Location = new System.Drawing.Point(120, 345);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(93, 32);
@@ -84,6 +88,7 @@
             // 
             // btnVolver
             // 
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.Location = new System.Drawing.Point(21, 345);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(93, 32);
@@ -106,7 +111,8 @@
             this.mrcAgregar.Controls.Add(this.txtNombre);
             this.mrcAgregar.Controls.Add(this.lblDescripcion);
             this.mrcAgregar.Controls.Add(this.txtCodigo);
-            this.mrcAgregar.Location = new System.Drawing.Point(21, 98);
+            this.mrcAgregar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mrcAgregar.Location = new System.Drawing.Point(21, 80);
             this.mrcAgregar.Name = "mrcAgregar";
             this.mrcAgregar.Size = new System.Drawing.Size(390, 231);
             this.mrcAgregar.TabIndex = 17;
@@ -118,7 +124,7 @@
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Location = new System.Drawing.Point(6, 31);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(40, 13);
+            this.lblCodigo.Size = new System.Drawing.Size(51, 17);
             this.lblCodigo.TabIndex = 4;
             this.lblCodigo.Text = "Código";
             // 
@@ -126,7 +132,7 @@
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(132, 189);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(252, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(252, 23);
             this.txtDescripcion.TabIndex = 15;
             this.txtDescripcion.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
             // 
@@ -135,7 +141,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Location = new System.Drawing.Point(6, 64);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.Size = new System.Drawing.Size(57, 17);
             this.lblNombre.TabIndex = 5;
             this.lblNombre.Text = "Nombre";
             // 
@@ -143,7 +149,7 @@
             // 
             this.txtCategoria.Location = new System.Drawing.Point(132, 154);
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(252, 20);
+            this.txtCategoria.Size = new System.Drawing.Size(252, 23);
             this.txtCategoria.TabIndex = 14;
             this.txtCategoria.TextChanged += new System.EventHandler(this.txtCategoria_TextChanged);
             // 
@@ -152,7 +158,7 @@
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Location = new System.Drawing.Point(6, 95);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(37, 13);
+            this.lblPrecio.Size = new System.Drawing.Size(44, 17);
             this.lblPrecio.TabIndex = 6;
             this.lblPrecio.Text = "Precio";
             // 
@@ -160,7 +166,7 @@
             // 
             this.txtPrecio.Location = new System.Drawing.Point(132, 88);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(100, 20);
+            this.txtPrecio.Size = new System.Drawing.Size(100, 23);
             this.txtPrecio.TabIndex = 13;
             this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
             // 
@@ -169,7 +175,7 @@
             this.lblStock.AutoSize = true;
             this.lblStock.Location = new System.Drawing.Point(6, 128);
             this.lblStock.Name = "lblStock";
-            this.lblStock.Size = new System.Drawing.Size(35, 13);
+            this.lblStock.Size = new System.Drawing.Size(40, 17);
             this.lblStock.TabIndex = 7;
             this.lblStock.Text = "Stock";
             // 
@@ -177,7 +183,7 @@
             // 
             this.txtStock.Location = new System.Drawing.Point(132, 121);
             this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(100, 20);
+            this.txtStock.Size = new System.Drawing.Size(100, 23);
             this.txtStock.TabIndex = 12;
             this.txtStock.TextChanged += new System.EventHandler(this.txtStock_TextChanged);
             // 
@@ -186,7 +192,7 @@
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Location = new System.Drawing.Point(6, 161);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(52, 13);
+            this.lblCategoria.Size = new System.Drawing.Size(65, 17);
             this.lblCategoria.TabIndex = 8;
             this.lblCategoria.Text = "Categoria";
             // 
@@ -194,7 +200,7 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(132, 57);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(252, 20);
+            this.txtNombre.Size = new System.Drawing.Size(252, 23);
             this.txtNombre.TabIndex = 11;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
@@ -203,7 +209,7 @@
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Location = new System.Drawing.Point(6, 196);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(63, 13);
+            this.lblDescripcion.Size = new System.Drawing.Size(76, 17);
             this.lblDescripcion.TabIndex = 9;
             this.lblDescripcion.Text = "Descripcion";
             // 
@@ -211,37 +217,41 @@
             // 
             this.txtCodigo.Location = new System.Drawing.Point(132, 24);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(100, 23);
             this.txtCodigo.TabIndex = 10;
             this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // lblBuscar
             // 
             this.lblBuscar.AutoSize = true;
+            this.lblBuscar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscar.Location = new System.Drawing.Point(27, 30);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(94, 13);
+            this.lblBuscar.Size = new System.Drawing.Size(119, 17);
             this.lblBuscar.TabIndex = 18;
             this.lblBuscar.Text = "Buscar por Código";
             // 
             // lblBuscar2
             // 
             this.lblBuscar2.AutoSize = true;
+            this.lblBuscar2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscar2.Location = new System.Drawing.Point(27, 60);
             this.lblBuscar2.Name = "lblBuscar2";
-            this.lblBuscar2.Size = new System.Drawing.Size(0, 13);
+            this.lblBuscar2.Size = new System.Drawing.Size(0, 17);
             this.lblBuscar2.TabIndex = 19;
             // 
             // txtBuscar
             // 
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.Location = new System.Drawing.Point(153, 27);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(100, 23);
             this.txtBuscar.TabIndex = 20;
             this.txtBuscar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnConsultar
             // 
+            this.btnConsultar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.Location = new System.Drawing.Point(318, 20);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(93, 32);
@@ -254,7 +264,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(425, 387);
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.ClientSize = new System.Drawing.Size(430, 392);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lblBuscar2);
@@ -264,6 +275,7 @@
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnGuardar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEliminar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEliminar";
